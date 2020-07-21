@@ -15,6 +15,7 @@ Integration of JavaFX and Spring Boot template
 
    private ConfigurableApplicationContext applicationContext;
    
+   One of the implementation of the ApplicationContext container. This container is used for Event Handling propose.
    
 
 
