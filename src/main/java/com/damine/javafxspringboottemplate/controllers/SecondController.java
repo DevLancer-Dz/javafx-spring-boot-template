@@ -25,6 +25,6 @@ public class SecondController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        label.setText(welcomeService.welcome()+"this is second Windows");
+        label.setText(welcomeService.welcome()+" this is second Windows");
     }
 }
