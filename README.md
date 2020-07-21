@@ -14,8 +14,9 @@ Integration of JavaFX and Spring Boot template
 1) ConfigurableApplicationContext :
 
    private ConfigurableApplicationContext applicationContext;
-
    
+   
+
 
 ![Screenshot](images/carbon2.png)
 
@@ -32,3 +33,5 @@ Integration of JavaFX and Spring Boot template
 ![Screenshot](images/carbon5.png)
 
 # enjoy your first javafx spring boot project
+
+![Screenshot](images/Capture.JPG)
