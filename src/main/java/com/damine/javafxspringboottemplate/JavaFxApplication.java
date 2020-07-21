@@ -19,6 +19,7 @@ public class JavaFxApplication extends Application {
         FXMLLoader loader = new FXMLLoader();
         URL xmlUrl = getClass().getResource("/fxml/home.fxml");
         loader.setLocation(xmlUrl);
+        loader.setControllerFactory(this::createControllerForType);
         Parent root = null;
         try {
             root = loader.load();
@@ -28,6 +29,10 @@ public class JavaFxApplication extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    private Object createControllerForType(Class<?> type) {
+        return this.applicationContext.getBean(type);
     }
 
     @Override
