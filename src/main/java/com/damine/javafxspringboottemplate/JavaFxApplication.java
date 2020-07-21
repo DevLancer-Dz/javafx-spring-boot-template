@@ -21,8 +21,7 @@ public class JavaFxApplication extends Application {
             URL xmlUrl = getClass().getResource("/fxml/home.fxml");
             loader.setLocation(xmlUrl);
             loader.setControllerFactory(this::createControllerForType);
-            Parent root = null;
-            root = loader.load();
+            Parent root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
