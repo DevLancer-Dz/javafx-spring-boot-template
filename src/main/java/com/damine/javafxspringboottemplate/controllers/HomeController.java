@@ -1,6 +1,7 @@
 package com.damine.javafxspringboottemplate.controllers;
 
 import com.damine.javafxspringboottemplate.services.WelcomeService;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -25,9 +26,13 @@ public class HomeController implements Initializable {
         this.welcomeService = welcomeService;
     }
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         label.setText(welcomeService.welcome());
+    }
+
+    @FXML
+    void go(ActionEvent event) {
+        
     }
 }
