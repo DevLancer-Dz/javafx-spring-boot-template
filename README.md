@@ -36,3 +36,16 @@ Integration of JavaFX and Spring Boot template
 # enjoy your first javafx spring boot project
 
 ![Screenshot](images/Capture.JPG)
+
+# open second windows
+
+1) @Autowired ApplicationContext
+![Screenshot](images/carbon7.png)
+2) load seconf stage 
+![Screenshot](images/carbon8.png)
+
+![Screenshot](images/carbon6.png)
+
+
+
+
