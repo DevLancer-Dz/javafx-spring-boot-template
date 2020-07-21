@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 
 import java.net.URL;
@@ -16,9 +17,11 @@ public class HomeController implements Initializable {
     private Label label;
 
     private final WelcomeService welcomeService;
+    private final ApplicationContext applicationContext ;
 
     @Autowired
-    public HomeController(WelcomeService welcomeService) {
+    public HomeController(WelcomeService welcomeService,ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
         this.welcomeService = welcomeService;
     }
 
