@@ -11,6 +11,12 @@ Integration of JavaFX and Spring Boot template
 
 # create JavafxApplication
 
+1) ConfigurableApplicationContext :
+
+   private ConfigurableApplicationContext applicationContext;
+
+   
+
 ![Screenshot](images/carbon2.png)
 
 # create fxml home

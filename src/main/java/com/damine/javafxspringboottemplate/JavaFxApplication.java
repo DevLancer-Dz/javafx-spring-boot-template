@@ -14,6 +14,7 @@ import java.net.URL;
 
 public class JavaFxApplication extends Application {
     private ConfigurableApplicationContext applicationContext;
+
     @Override
     public void start(Stage stage) {
         try {

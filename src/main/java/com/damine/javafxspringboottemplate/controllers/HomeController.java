@@ -23,10 +23,10 @@ public class HomeController implements Initializable {
     private Label label;
 
     private final WelcomeService welcomeService;
-    private final ApplicationContext applicationContext ;
+    private final ApplicationContext applicationContext;
 
     @Autowired
-    public HomeController(WelcomeService welcomeService,ApplicationContext applicationContext) {
+    public HomeController(WelcomeService welcomeService, ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
         this.welcomeService = welcomeService;
     }
@@ -45,10 +45,10 @@ public class HomeController implements Initializable {
             loader.setControllerFactory(applicationContext::getBean);
             Parent root = loader.load();
             Scene scene = new Scene(root);
-            Stage stage=new Stage();
+            Stage stage = new Stage();
             stage.setScene(scene);
             stage.show();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
