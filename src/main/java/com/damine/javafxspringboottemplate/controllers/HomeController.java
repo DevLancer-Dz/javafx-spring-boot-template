@@ -49,6 +49,7 @@ public class HomeController implements Initializable {
             stage.setScene(scene);
             stage.show();
         }catch (IOException e){
+            e.printStackTrace();
         }
 
     }
