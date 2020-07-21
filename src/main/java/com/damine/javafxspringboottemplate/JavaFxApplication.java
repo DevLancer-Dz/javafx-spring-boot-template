@@ -16,19 +16,19 @@ public class JavaFxApplication extends Application {
     private ConfigurableApplicationContext applicationContext;
     @Override
     public void start(Stage stage) {
-        FXMLLoader loader = new FXMLLoader();
-        URL xmlUrl = getClass().getResource("/fxml/home.fxml");
-        loader.setLocation(xmlUrl);
-        loader.setControllerFactory(this::createControllerForType);
-        Parent root = null;
         try {
+            FXMLLoader loader = new FXMLLoader();
+            URL xmlUrl = getClass().getResource("/fxml/home.fxml");
+            loader.setLocation(xmlUrl);
+            loader.setControllerFactory(this::createControllerForType);
+            Parent root = null;
             root = loader.load();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
     }
 
     private Object createControllerForType(Class<?> type) {
