@@ -2,15 +2,32 @@ package com.damine.javafxspringboottemplate;
 
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
+
+import java.io.IOException;
+import java.net.URL;
 
 public class JavaFxApplication extends Application {
     private ConfigurableApplicationContext applicationContext;
     @Override
     public void start(Stage stage) {
-
+        FXMLLoader loader = new FXMLLoader();
+        URL xmlUrl = getClass().getResource("/fxml/home.fxml");
+        loader.setLocation(xmlUrl);
+        Parent root = null;
+        try {
+            root = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @Override
